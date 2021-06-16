@@ -1,4 +1,4 @@
-(function (vue) {
+var image = (function (vue) {
   'use strict';
 
   var script = {
@@ -20,4 +20,4 @@
 
   return script;
 
-}(vue));
+}(Vue));

@@ -1,6 +1,6 @@
 const playwright = require('playwright-aws-lambda')
 const fs = require('fs')
-const script = fs.readFileSync('./image.js', 'utf-8')
+const script = fs.readFileSync('image.js', 'utf-8')
 
 exports.handler = async function (event, ctx) {
   const browser = await playwright.launchChromium()
@@ -15,6 +15,7 @@ exports.handler = async function (event, ctx) {
   
     <body>
       <div id="corgi"><div>CORGIIIS</div></div>
+      <image />
     </body>
   </html>
   `)
@@ -29,7 +30,7 @@ exports.handler = async function (event, ctx) {
   const screenshotBuffer = await page.screenshot({clip: boundingRect})
 
   await browser.close()
-  
+
   return {
     isBase64Encoded: true,
     statusCode: 200,

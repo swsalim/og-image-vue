@@ -13,7 +13,7 @@ export default {
   output: [
     {
       name: 'hello',
-      file: `hello.js`,
+      file: `functions/gen-opengraph-image/hello.js`,
       format: 'iife',
       globals: {
         vue: 'Vue'

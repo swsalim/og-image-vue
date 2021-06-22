@@ -9,11 +9,11 @@ import scss from 'rollup-plugin-scss'
 import vue from 'rollup-plugin-vue'
 
 export default {
-  input: 'index.js',
+  input: 'src/hello.js',
   output: [
     {
-      name: 'image',
-      file: `image.js`,
+      name: 'hello',
+      file: `hello.js`,
       format: 'iife',
       globals: {
         vue: 'Vue'

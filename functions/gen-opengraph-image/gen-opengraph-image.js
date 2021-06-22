@@ -2,7 +2,7 @@ const puppeteer = require('puppeteer-core');
 const chromium = require('chrome-aws-lambda');
 const fs = require('fs')
 const path = require('path')
-const script = fs.readFileSync('./hello.js', 'utf-8')
+const script = fs.readFileSync('hello.js', 'utf-8')
 
 const exePath = process.platform === 'win32'
 ? 'C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe'
